@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root {
+    //Declaring variable we can use for the rest of the SCSS document
+    --color-black-dark:#23272a;
+    --color-grey-dark:#2c2f33;
+    --color-grey-light:#99aab5;
+    --color-white-light:#ffffff;
+    --color-blue-light:#7289da;
+}
+
+* {
+    box-sizing: border-box;
+    //Padding and borders are included in the boxes height
+}
+
+body{
+    font-family: 'Open-Sans';
+    padding:0;
+    margin:0;
+}
+
+.discordApp{
+    height:100vh;
+    display:flex;
+}
+
+.servers{
+    background: var(--color-black-dark);
+    height:100%;
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 12px;
+}
+
+.server--icon{
+    width: 50px;
+    height:50px;
+    background: var(--color-grey-dark);
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:10px;
+    transition: all 0.215s ease-in-out;
+    cursor: pointer;
+    color: var(--color-white-light);
+    position: relative;
+    &.active{
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 10px;
+            background: var(--color-white-light);
+            height:45px;
+            margin-left: -15px;
+            border-radius: 33px;
+        }
+
+    }
+    &:hover {
+        border-radius: 25%;
+        background: var(--color-blue-light) ;
+    }
+
+}
+
+.server--seperator{
+    width:40px;
+    height: 2px;
+    background: var(--color-grey-dark);
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.chatOuter{
+    background:var(--color-white-light);
+    width: 100%;
+    height: 100%;
+}
+
+.channels {
+    background: var(--color-grey-dark);
+    width: 240px;
+    height: 100%;
+    color: var(--color-grey-light);
+    nav{
+        color: var(--color-white-light);
+        border-bottom: 2px solid var(--color-black-dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        h3{
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+.channels--list{
+    padding: 15px 0;
+}
+
+.channels--list-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 0 10px;
+
+    h4{
+        font-size: 12px;
+        margin: 0;
+        text-transform: uppercase;
+        span{
+            padding: 0 5px;
+        }
+    }
+}
+
+.channels--list-content-item{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    &:hover{
+        background: var(--color-grey-light);
+        color: var(--color-white-light);
+    }
+    span{
+        margin-right: 10px;
+    }
+
+    h5{
+        font-size: 16px;
+        margin: 0;
+        font-weight: 500;
+    }
+}
