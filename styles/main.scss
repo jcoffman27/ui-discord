@@ -80,6 +80,7 @@ body{
     background:var(--color-white-light);
     width: 100%;
     height: 100%;
+    display: flex;
 }
 
 .channels {
@@ -87,13 +88,16 @@ body{
     width: 240px;
     height: 100%;
     color: var(--color-grey-light);
+    display: flex;
+    flex-direction: column;
     nav{
         color: var(--color-white-light);
         border-bottom: 2px solid var(--color-black-dark);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 15px;
+        height: 58px;
         h3{
             margin: 0;
             font-size: 16px;
@@ -142,4 +146,105 @@ body{
         margin: 0;
         font-weight: 500;
     }
+}
+
+.channels--userArea{
+    background: var(--color-white-light);
+    margin-top: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .name{
+        display: flex;
+        //flex-direction: column;
+        .userIcon{
+            width: 35px;
+            height: 35px;
+            background: var(--color-blue-light);
+            color: var(--color-white-light);
+            border-radius: 50%;
+            margin-right: 5px;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+        }
+        h4{
+            margin: 10px 0 3px;
+            color: var(--color-black-dark);
+            line-height: 0;
+        }
+        .subText {
+                color: var(--color-grey-light);
+                font-size: 12px;
+        }
+    }
+    .icons{
+        margin-left: auto;
+        span{
+            padding:10px;
+        }
+    }
+}
+
+.chat{
+    width: calc(100% - 240px);
+    display: flex;
+    background: var(--color-grey-light);
+    flex-direction: column;
+    nav{
+        border-bottom: 2px solid var(--color-black-dark);
+        color: var(--color-black-dark);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height:58px;
+        align-items: center;
+        padding: 15px;
+        span{
+            font-size:20px;
+            margin-right: 10px;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        h2{
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+.chat--inner{
+    display: flex;
+    height: 100%;
+}
+
+.messages{
+    width: calc(100% - 240px);
+    display:flex;
+    flex-direction: column;
+    .messages--send{
+        //background: green;
+        margin-top: auto;
+        padding: 15px;
+        input{
+            width: 100%;
+            height: 40px;
+            border: 0;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+}
+
+.members{
+    width: 240px;
+    background: var(--color-grey-dark);
+    height: 100%;
+    padding: 15px;
 }
