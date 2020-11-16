@@ -248,3 +248,40 @@ body{
     height: 100%;
     padding: 15px;
 }
+
+
+
+.members{
+    .members--online{
+        color: var(--color-white-light);
+        disply: flex;
+        flex-direction: row;
+        margin-top: 0;
+        font-size: 10px;
+        margin-bottom: 5px;
+
+    }
+    .name{
+   display: flex;
+        .userIcon{
+            width: 35px;
+            height: 35px;
+            background: var(--color-blue-light);
+            color: var(--color-white-light);
+            border-radius: 50%;
+            margin-right: 5px;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+
+        }
+        h4{
+            margin: 15px 3px 3px;
+            color: var(--color-white-light);
+            line-height: 0;
+        }
+        .user--displayed{
+            font-size: 12px;
+        }
+    }
+}
